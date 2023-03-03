@@ -11,21 +11,35 @@ startButtonEl.addEventListener("click", function(){
 
     for (let i = 0; i < cellTotal; i++) {
 
-        let newCellEl = generateCell()
+        let newCellEl = generateCell(i);
 
         gridContainerEl.append(newCellEl);
     
     }
 
+    newCellEl.addEventListener("click", function(){
+    
+        newCellEl.classList.toggle("blue");
+    
+    })
+
 })
 
-function generateCell() {
+
+
+
+
+
+
+function generateCell(number) {
 
     let cell = document.createElement("div");
 
     cell.classList.add("cella");
 
     cell.style.backgroundColor = "yellow";
+
+    cell.textContent = number;
     
     return cell;
 
