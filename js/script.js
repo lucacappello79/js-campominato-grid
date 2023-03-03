@@ -13,15 +13,17 @@ startButtonEl.addEventListener("click", function(){
 
         let newCellEl = generateCell(i);
 
+        
+        newCellEl.addEventListener("click", function(){
+            
+            newCellEl.classList.toggle("blue");
+            
+        })
+
         gridContainerEl.append(newCellEl);
-    
+
     }
 
-    newCellEl.addEventListener("click", function(){
-    
-        newCellEl.classList.toggle("blue");
-    
-    })
 
 })
 
@@ -37,7 +39,7 @@ function generateCell(number) {
 
     cell.classList.add("cella");
 
-    cell.style.backgroundColor = "yellow";
+    //cell.style.backgroundColor = "yellow";
 
     cell.textContent = number;
     
